@@ -1,0 +1,23 @@
+---
+title: Le Wagon - Middleman - Meet the team
+---
+
+<!-- <div class="container"> -->
+  <div class="template">
+
+      <p class = "template-love">This template is built with <i class="fa fa-heart"></i> by</p>
+</div>
+
+      <ul class="list-inline text-center">
+        <!-- <% data.users.each do |user| %> -->
+          <li>
+            <% [user.github_nickname].each do |gh_username| %>
+              <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.github_nickname}", class: "img-circle" %>
+              <h2><%= user.github_nickname.capitalize %></h2>
+              <% end %>
+              <% link_to "https://github.com/#{user.github_nickname}", target: "_blank" do %>
+              <i class="fa fa-github"></i> <%= user.github_nickname %>
+              <% end %>
+            <% end %>
+          </li>
+          </ul>
