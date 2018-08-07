@@ -1,0 +1,29 @@
+<!-- Access data.flats with owner's name as key -->
+<% flat = data.flats[owner] %>
+
+<!-- Inject flat data in template -->
+
+<div class="container flats-show">
+  <div class="card">
+    <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{owner}", class: "img-circle" %>
+    <h1 class="flat-desc"><%= flat.description %></h1>
+    <p><%= flat.city_name %></p>
+  </div>
+
+  <div class="booking-form">
+    <h3>Book this flat</h3>
+    <form>
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name">
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+
+</div>
